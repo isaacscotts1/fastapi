@@ -36,6 +36,6 @@ async def test_posts(db: Session=Depends(get_db)):
 	return {"message":"you've done it"}	
 @app.get("/")
 async def root():
-        return {"hello thanks for logging in"}
+        return {"Man !! This is isaac scotts from Kaytic International"}
 
 
