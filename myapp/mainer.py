@@ -19,7 +19,7 @@ app=FastAPI()
 origins=["*"]
 app.add_middleware(CORSMiddleware,allow_origins=origins,allow_credentials=True,allow_methods=["*"],allow_headers=["*"],)
 			
-const port = process.env.PORT || 5000			
+port = process.env.PORT || 5000			
 
 #my_posts=[{"title":"title of post1","content":"content of post1","id":1},{"title":"hello","content":"much love","id":2}
 
