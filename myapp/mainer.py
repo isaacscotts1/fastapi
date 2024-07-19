@@ -21,31 +21,10 @@ app.add_middleware(CORSMiddleware,allow_origins=origins,allow_credentials=True,a
 			
 			
 
-#my_posts=[{"title":"title of post1","content":"content of post1","id":1},{"title":"hello","content":"much love","id":2}]
-while True:
-	try:
-		conn=mysql.connector.connect(
-		host="localhost",
-		user="root",
-		password="MyN3wP4ssw0rd",
-		database="izo")
-		cursor=conn.cursor()
-		print("database connection was succesfull")
-		break
-	except Exception as error:
-		print("connection to the database failed")
-		print("error",error)
-		time.sleep(2)
+#my_posts=[{"title":"title of post1","content":"content of post1","id":1},{"title":"hello","content":"much love","id":2}
 
 
-def find_post(id):
-	for p in my_posts:
-		if p["id"] ==id:
-			return p
-def find_index(id):
-		for i,p in enumerate(my_posts):
-			if p["id"]==id:
-				return i
+
 				
 app.include_router(post.router)
 app.include_router(user.router)
